@@ -20,6 +20,11 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
+const axios = require('axios');
+const dot = require('dotenv')
+dot.config()
+axios.defaults.baseURL = 'http://localhost:3001';
+
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
