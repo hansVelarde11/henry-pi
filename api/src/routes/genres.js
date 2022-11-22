@@ -1,9 +1,9 @@
-require('dotenv').config();
 const { APIKEY } = process.env;
-const { Router } = require('express');
+import { Router } from 'express';
 const router = Router();
-const axios = require('axios').default;
-const { Genre } = require('../db');
+import axios from 'axios';
+require('dotenv').config();
+import { Genre } from '../db';
 
 router.get('/', async (req, res) => {
     try {
@@ -31,4 +31,4 @@ router.get('/', async (req, res) => {
     }
 })
 
-module.exports = router;
+export default router;
