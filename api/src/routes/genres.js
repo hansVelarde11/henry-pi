@@ -2,10 +2,8 @@ require('dotenv').config();
 const { APIKEY } = process.env;
 const { Router } = require('express');
 const router = Router();
-const axios = require('axios').default;
+const axios = require('axios');
 const { Genre } = require('../db');
-
-//TODO -----> GET a "/genres" <--------
 
 router.get('/', async (req, res) => {
     try {
