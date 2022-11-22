@@ -4,7 +4,6 @@ import imagen from '../../img/videogame.png'
 import './about.css'
 
 
-
 function About() {
     return (
         <>

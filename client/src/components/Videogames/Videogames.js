@@ -5,10 +5,10 @@ import { connect } from 'react-redux'
 import Videogame from '../VideoGame/Videogame'
 import Pagination from '../Pagination/Pagination'
 import FilteredBy from '../FilterBy/FilterBy'
-import { getAllGames, getGenres } from '../../redux/actions/actions'
-import notFound from '../../img/llorando.gif'
-import loading from '../../img/conecting.gif'
 import './videogames.css'
+import { getAllGames, getGenres } from '../../redux/actions/actions'
+import notFound from '../../img/llorando.png'
+import loading from '../../img/conecting.gif'
 
 function Videogames({allGames, getAllGames, getGenres }) {
 

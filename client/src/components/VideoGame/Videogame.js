@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import photo from '../../img/created.jpg'
 import './videogame.css'
+import photo from '../../img/created.jpg'
 
 
 export default function Videogame(props) {
