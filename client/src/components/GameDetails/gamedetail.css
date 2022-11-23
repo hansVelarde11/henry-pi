@@ -1,5 +1,4 @@
 .container-detail {
-    background-image: url("../../img/details2.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,12 +7,12 @@
 
 .details-div {
     display: flex;
+    margin: auto;
     justify-content: center;
     border: 1px solid black;
-    z-index: 1;
-    margin: 10px;
+    height: 50%;
+    width: 50%;
     background-color: rgb(78, 3, 112);
-    opacity: 0.8;
 }
 
 .details-div p {
@@ -31,20 +30,18 @@
 
 .details-div img{
     border: 5px solid black;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 10px;
-    width: 600px;
-    height: 400px;
+    width: 30%;
+    height: 20%;
 }
 
 .title {
     display: flex;
     justify-content: center;
     font-size:xx-large;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .div-descr {
@@ -66,12 +63,12 @@
     height: 40px;
     font-family: 'Press Start 2P';
     position: relative;
-    left: 46%;
+    left: 40%;
     border-radius: 20px;
-    background-color: aqua;
+    background-color: rgb(171,14,14,0.821);
 }
 
 .div-descr button:hover {
     background-color: black;
-    color: aqua;
+    color: rgb(255, 255, 255);
 }
