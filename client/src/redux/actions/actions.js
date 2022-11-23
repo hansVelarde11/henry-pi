@@ -6,7 +6,7 @@ import {
   GET_GENRES,
   ORDER_BY,
   FILTER_BY,
-} from "./constants";
+} from "./constants.js";
 
 //* Trae todos los juegos (DB + API)
 export function getAllGames() {

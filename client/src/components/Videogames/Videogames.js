@@ -41,8 +41,8 @@ function Videogames({allGames, getAllGames, getGenres }) {
     return (
       <div className="container">
         <NavBar />
-        <SearchBar />
         <FilteredBy />
+        <SearchBar />
         <Pagination
           cardPerPage={cardPerPage}
           totalCards={allGames.length}

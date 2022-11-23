@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import React, {useState} from 'react'
 import NavBar from '../NavBar/NavBar'
 import axios from 'axios'
 import './CrearJuego.css'
@@ -94,26 +94,26 @@ function CrearJuego(props) {
         <NavBar />
         <div className="main-add">
             <div className="container-add">
-                <h2>CREATE GAME - DETAILS -</h2>
+                <h2>REGISTRA TU TÍTULO FAVORITO</h2>
                 <div className="div-cont">
                     <form onSubmit={handleSubmit} onChange={handleChange}>
-                        <label htmlFor='name' className="title-name"><strong>Name: </strong></label>
+                        <label htmlFor='name' className="title-name"><strong>Título</strong></label>
                         <br />
-                        <input className="name" placeholder='Name' type="text" id='name' name='name' autoComplete="off"/>
+                        <input className="name" placeholder='Título del juego' type="text" id='name' name='name' autoComplete="off"/>
                         <br />
-                        <label htmlFor="description" className="title-name"><strong>Description: </strong></label>
+                        <label htmlFor="description" className="title-name"><strong>Sinópsis</strong></label>
                         <br />
-                        <textarea className="name" name='description' placeholder='Description...' id="description" cols="30" rows="3" />
+                        <textarea className="name" name='description' placeholder='Escribir una sinópsis' id="description" cols="30" rows="3" />
                         <br />
-                        <label htmlFor="date" className="title-name"><strong>Release Date: </strong></label>
+                        <label htmlFor="date" className="title-name"><strong>Fecha de lanzamiento </strong></label>
                         <br />
                         <input name='releaseDate' className="dt" type="date" id="date" required />
                         <br />
-                        <label htmlFor="rating" className="title-name"><strong>Rating: </strong></label>
+                        <label htmlFor="rating" className="title-name"><strong>Puntaje</strong></label>
                         <br />
-                        <input name='rating' className="dt" placeholder='Rate from 1 to 5' type="tel" id="rating" maxLength='1' autoComplete="off"/>
+                        <input name='rating' className="dt" placeholder='1-5' type="tel" id="rating" maxLength='1' autoComplete="off"/>
                         <br />
-                        <label className="title-name"><strong>Genres:</strong></label>
+                        <label className="title-name"><strong>Géneros</strong></label>
                         <div id='genres' className="genres-div">
                             <div className="Action">
                                 <input name='Action' value='2' type="checkbox" id="Action" />
@@ -176,7 +176,7 @@ function CrearJuego(props) {
                                 <label htmlFor="Fighting">Fighting.</label>
                             </div>
                         </div>
-                        <label className="title-name"><strong>Platforms: </strong> </label>
+                        <label className="title-name"><strong>Plataformas disponibles </strong> </label>
                         <div id='platforms' className="plat-div">
                             <div>
                                 <input name='PC' type="checkbox" id="PC" />
@@ -213,7 +213,7 @@ function CrearJuego(props) {
                         </div>
                         <br />
                         <div className="div-but-form">
-                        <button type='submit'>Create</button>
+                        <button type='submit'>Registrar</button>
                         </div>
                     </form>
                 </div>

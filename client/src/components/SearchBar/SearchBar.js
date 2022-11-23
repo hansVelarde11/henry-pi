@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import React, {useState} from 'react'
 import { connect } from 'react-redux'
 import { searchByName, getAllGames } from '../../redux/actions/actions'
 import './SearchBar.css'
@@ -23,19 +23,15 @@ function SearchBar({searchByName, getAllGames}) {
         });
     }
 
-    const handleOnClickAll = () => {
-        getAllGames()
-        setInput({
-            buscar: ''
-        });
-    }
+  
 
+    
     return (
       <div className="searchbar-div">
         <input
           className="bar-btn"
           name="buscar"
-          placeholder="buscá tu juego..."
+          placeholder="Buscar por nombre"
           onChange={handleInputChange}
           value={input.buscar}
           autoComplete="off"
@@ -43,11 +39,9 @@ function SearchBar({searchByName, getAllGames}) {
         <button className="btn" onClick={handleOnClick}>
           Buscar
         </button>
-        <button className="btn" onClick={handleOnClickAll}>
-          CargarTodos
-        </button>
       </div>
     );
 }
+
 
 export default connect(null, { searchByName, getAllGames })(SearchBar)

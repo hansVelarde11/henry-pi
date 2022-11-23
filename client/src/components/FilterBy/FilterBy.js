@@ -15,19 +15,13 @@ function FilteredBy({orderBy, genres, filterBy}) {
     return (
         <div className='container-div'>
             <select  className="selectCont" onChange={handleSelect} name="" id="">
-                <option className="option" value="default">TODOS...</option>
-                <optgroup className="optionGroup" label="DataBase">
-                    <option className="option" value="DB">CREADOS</option>
-                </optgroup>
-                <optgroup className="optionGroup" label="API">
-                    <option className="option" value="API">API</option>
-                </optgroup>              
-                <optgroup className="optionGroup" label="GENRES">
+                <option className="option" value="default">Seleccionar</option>
+                <optgroup className="optionGroup" label="Géneros">
                     {genres && genres.map(g => <option key={g.name} value={g.name}>{g.name}</option>)}
                 </optgroup>                
             </select>
             <select  className="selectCont" onChange={handleSelect2} name="" id="">
-                <option className="option" value="default">ORDEN...</option>
+                <option className="option" value="default">Ver por</option>
                 <optgroup className="optionGroup" label="Rating">
                     <option className="option" value="asc">Mayor a Menor</option>
                     <option className="option" value="desc">Menor a Mayor</option>

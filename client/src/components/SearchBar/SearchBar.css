@@ -7,28 +7,21 @@
 }
 
 .btn {
-    margin-left: 5px;
-    font-family: 'Press Start 2P';
+    font-family: 'sans-serif';
     padding: 10px;
-    margin: 20px;
-    border-radius: 30px;
-    background-color: rgb(224, 64, 176);
+    background-color: rgb(171,14,14,0.821);
 }
 
 .bar-btn {
-    font-family: 'Press Start 2P';
+    font-family: 'sans-serif';
     padding: 10px;
     margin: 20px;
     width: 380px;
-    background-color: wheat;
-    border-radius: 20px;
+    background-color: rgb(251, 251, 251);
 }
 
 .btn:hover {
     background-color: black;
-    color: rgb(224, 64, 176);
+    color: rgba(255, 255, 255, 0.821);
 }
 
-.bar-btn:hover {
-    background-color:bisque
-}

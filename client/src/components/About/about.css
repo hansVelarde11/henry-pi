@@ -1,13 +1,15 @@
 .container-about {
-    margin-top: 40px;
-    font-family: 'Press Start 2P';
+    font-family: 'sans-serif';
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 10%;
 }
 
 .container-about h1 {
     font-size: medium;
     color: aliceblue;
+    margin-top: 0%;
+    font-family: 'sans-serif';
 }

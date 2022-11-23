@@ -5,15 +5,14 @@ import { GET_ALL_GAMES,
     ORDER_BY,
     FILTER_BY } from "../actions/constants.js";
 
-    const initialState = {
-        allGames: [],
-        gamesBackUp: [],
-        gameDetails: {},
-        genres: [],
-        filtered: []
-    };
+   const initialState = {
+    allGames: [],
+    gamesBackUp: [],
+    gameDetails: {},
+    genres: [],
+    filtered: []
+};
 
-    
 export default function rootReducer(state = initialState, action) {
     switch (action.type) {
            case GET_ALL_GAMES:
@@ -60,7 +59,7 @@ export default function rootReducer(state = initialState, action) {
                             return game.genres.find((genre) => {
                                 return genre === action.payload})
                         })}
-                    };
+                    }
 
             case ORDER_BY:
                 if(action.payload === 'A-Z'){
@@ -86,7 +85,7 @@ export default function rootReducer(state = initialState, action) {
                     }     
                 else {
                     return {...state, filtered: state.gamesBackUp}
-                    };
+                    }
         default: 
             return state;
     }

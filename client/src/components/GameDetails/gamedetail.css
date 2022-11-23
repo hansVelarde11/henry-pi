@@ -12,14 +12,14 @@
     border: 1px solid black;
     z-index: 1;
     margin: 10px;
-    background-color: rgb(223, 149, 200);
+    background-color: rgb(78, 3, 112);
     opacity: 0.8;
 }
 
 .details-div p {
     display: flex;
     justify-content: center;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: larger;
     font-weight: 500;
 }

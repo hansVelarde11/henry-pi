@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import { connect }from 'react-redux'
 import { getVideogameDetail } from '../../redux/actions/actions'
 import Navbar from '../NavBar/NavBar'
