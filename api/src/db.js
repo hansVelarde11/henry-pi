@@ -32,7 +32,7 @@ let sequelize =
       })
     : new Sequelize(
         `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`,
-        { logging: false, native: false }
+        { logging: true, native: false }
       );
 const basename = path.basename(__filename);
 
