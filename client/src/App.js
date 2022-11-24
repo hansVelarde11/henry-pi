@@ -5,7 +5,6 @@ import About from './components/About/About';
 import CrearJuego from './components/CrearJuego/CrearJuego';
 import GameDetails from './components/GameDetails/GameDetails';
 import Landing from './components/Landing/Landing';
-import Page404 from './components/Page404/page404';
 import Videogames from './components/Videogames/Videogames';
 
 
@@ -18,7 +17,6 @@ function App() {
           <Route exact path="/crearjuego" component={CrearJuego} />
           <Route exact path='/videogame/:idVideogame' component={GameDetails} />
           <Route exact path='/about' component={About} />
-          <Route path='*' component={Page404} />
           </Switch>
       </BrowserRouter>
   );

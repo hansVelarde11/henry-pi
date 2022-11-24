@@ -4,7 +4,7 @@ import { GET_ALL_GAMES,
     GET_GENRES,
     ORDER_BY,
     FILTER_BY } from "../actions/constants";
-
+    
    const initialState = {
     allGames: [],
     gamesBackUp: [],
