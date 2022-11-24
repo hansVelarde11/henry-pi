@@ -18,7 +18,7 @@ let sequelize =
         pool: {
           max: 3,
           min: 1,
-          idle: 10000,
+          idle: 100000,
         },
         dialectOptions: {
           ssl: {
@@ -58,8 +58,8 @@ const { Videogame,Genre } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
-Videogame.belongsToMany(Genre, {through: "Videogame_Genre"})
-Genre.belongsToMany(Videogame, {through: "Videogame_Genre"})
+Videogame.belongsToMany(Genre, {through: "VideogameGenre"})
+Genre.belongsToMany(Videogame, {through: "VideogameGenre"})
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');

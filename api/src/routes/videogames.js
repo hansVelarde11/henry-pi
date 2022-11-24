@@ -53,13 +53,13 @@ router.get('/', async (req, res) => {
             while (pages < 5) {
                 pages++;
                 //filtro solo la DATA que necesito enviar al FRONT
-                const gammesREADY = response.data.results.map(game => {
+                const gammesREADY = response.data.results.map (game => {
 					return{
 						id: game.id,
 						name: game.name,
 						background_image: game.background_image,
 						rating: game.rating,
-                        genres: game.genres.map(g => g.name)
+                        genres: game.genres.map (g => g.name)
 					}
 				});
                 results = [...results, ...gammesREADY]
