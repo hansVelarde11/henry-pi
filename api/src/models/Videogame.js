@@ -10,11 +10,11 @@ module.exports = (sequelize) => {
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: true
+      allowNull: false
     },
     platforms: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: false
     }, 
     releaseDate: {
       type: DataTypes.STRING
