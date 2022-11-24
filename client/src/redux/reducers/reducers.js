@@ -3,7 +3,7 @@ import { GET_ALL_GAMES,
     GET_VIDEOGAME_DETAIL,
     GET_GENRES,
     ORDER_BY,
-    FILTER_BY } from "../actions/constants.js";
+    FILTER_BY } from "../actions/constants";
 
    const initialState = {
     allGames: [],
