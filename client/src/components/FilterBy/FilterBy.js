@@ -22,11 +22,11 @@ function FilteredBy({orderBy, genres, filterBy}) {
             </select>
             <select  className="selectCont" onChange={handleSelect2} name="" id="">
                 <option className="option" value="default">Ver por</option>
-                <optgroup className="optionGroup" label="Rating">
+                <optgroup className="optionGroup" label="Puntaje">
                     <option className="option" value="asc">Mayor a Menor</option>
                     <option className="option" value="desc">Menor a Mayor</option>
                 </optgroup>               
-                <optgroup className="optionGroup" label="Alphabetic">
+                <optgroup className="optionGroup" label="Alfabético">
                     <option className="option" value="A-Z">A - Z</option>
                     <option className="option" value="Z-A">Z - A</option>
                 </optgroup>     

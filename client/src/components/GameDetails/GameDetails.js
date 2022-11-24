@@ -23,23 +23,15 @@ function GameDetails(props) {
           {gameDetails ? (
             <div>
               <h3 className="title">{gameDetails.name}</h3>
-              {gameDetails.background_image ? (
-                <div className="div-img">
-                  <img src={gameDetails.background_image} alt="Videogame"></img>
-                </div>
-              ) : (
-                <div className="div-img">
-                  <img src={photo} alt="Videogame"></img>
-                </div>
-              )}
+              
               {
                 <p>
-                  <strong>Release Date</strong>:{" "}
+                  <strong>Fecha lanzamiento</strong>:{" "}
                   {`${gameDetails.releaseDate || "None"}`}
                 </p>
               }
               <p>
-                <strong>Rating</strong>: ★ {`${gameDetails.rating}`}
+                <strong>Puntaje</strong>: ★ {`${gameDetails.rating}`}
               </p>
               {gameDetails.description &&
               gameDetails.genres &&
@@ -50,15 +42,24 @@ function GameDetails(props) {
                       {gameDetails.description.replace(/(<([^>]+)>)/gi, "")}
                     </p>
                   }
+                  {gameDetails.background_image ? (
+                  <div className="div-img">
+                    <img src={gameDetails.background_image} alt="Videogame"></img>
+                  </div>
+                  ) : (
+                    <div className="div-img">
+                      <img src={photo} alt="Videogame"></img>
+                    </div>
+                  )}
                   {
                     <p>
-                      <strong>Genres</strong>:{" "}
+                      <strong>Géneros</strong>:{" "}
                       {`${gameDetails.genres.join(", ")}`}
                     </p>
                   }
                   {
                     <p>
-                      <strong>Platforms</strong>:{" "}
+                      <strong>Plataformas</strong>:{" "}
                       {`${
                         typeof gameDetails.platforms === "string"
                           ? gameDetails.platforms

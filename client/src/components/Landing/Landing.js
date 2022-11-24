@@ -8,7 +8,7 @@ export default function Landing() {
     <div className="MyImage">
         <img className="theImage" src="" alt="" />
         <Link to="/videogames">
-          <button className="myButton">INSERT COIN</button>
+          <button className="myButton">HOME</button>
         </Link>
     </div>
   );

@@ -45,15 +45,6 @@ export default function rootReducer(state = initialState, action) {
                     if (action.payload === 'default'){
                         return {...state, filtered: state.gamesBackUp}
                         }
-                      
-                    if(action.payload === 'DB'){
-                        return {...state, filtered: state.gamesBackUp.filter((game)=> (typeof game.id) === 'string')}
-                        }
-                      
-                    if(action.payload === 'API'){
-                        return {...state, filtered: state.gamesBackUp.filter((game)=> (typeof game.id) === 'number')}
-                        }
-                      
                     else {
                         return {...state, filtered: state.gamesBackUp.filter((game) => {
                             return game.genres.find((genre) => {

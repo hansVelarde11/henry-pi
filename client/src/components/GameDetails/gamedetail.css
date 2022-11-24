@@ -61,10 +61,9 @@
     margin: 5px;
     width: 100px;
     height: 40px;
-    font-family: 'Press Start 2P';
+    font-family: 'sans-serif';
     position: relative;
     left: 40%;
-    border-radius: 20px;
     background-color: rgb(171,14,14,0.821);
 }
 

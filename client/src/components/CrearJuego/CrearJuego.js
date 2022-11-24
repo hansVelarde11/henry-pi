@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
-import NavBar from '../NavBar/NavBar'
 import axios from 'axios'
+import NavBar from '../NavBar/NavBar'
 import './CrearJuego.css'
-
 function CrearJuego(props) {
 
-    const [errors, setErrors] = useState({ form: 'Must complete the form' });
+    const [errors, setErrors] = useState({ form: 'Debe completar el formulario' });
 
     const [form, setForm] = useState({
         name: '',
@@ -105,14 +104,6 @@ function CrearJuego(props) {
                         <br />
                         <textarea className="name" name='description' placeholder='Escribir una sinópsis' id="description" cols="30" rows="3" />
                         <br />
-                        <label htmlFor="date" className="title-name"><strong>Fecha de lanzamiento </strong></label>
-                        <br />
-                        <input name='releaseDate' className="dt" type="date" id="date" required />
-                        <br />
-                        <label htmlFor="rating" className="title-name"><strong>Puntaje</strong></label>
-                        <br />
-                        <input name='rating' className="dt" placeholder='1-5' type="tel" id="rating" maxLength='1' autoComplete="off"/>
-                        <br />
                         <label className="title-name"><strong>Géneros</strong></label>
                         <div id='genres' className="genres-div">
                             <div className="Action">
@@ -211,6 +202,16 @@ function CrearJuego(props) {
                                 <label htmlFor="PS Vita">PS Vita.</label>
                             </div>
                         </div>
+                        <br />
+                        <label htmlFor="date" className="title-name"><strong>Fecha de lanzamiento </strong></label>
+                        <br />
+                        <input name='releaseDate' className="dt" type="date" id="date" required />
+                        <br />
+                        <label htmlFor="rating" className="title-name"><strong>Puntaje</strong></label>
+                        <br />
+                        <input name='rating' className="dt" placeholder='1-5' type="tel" id="rating" maxLength='1' autoComplete="off"/>
+                        <br />
+                        
                         <br />
                         <div className="div-but-form">
                         <button type='submit'>Registrar</button>

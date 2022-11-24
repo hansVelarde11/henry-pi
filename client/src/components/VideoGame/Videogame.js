@@ -19,14 +19,14 @@ export default function Videogame(props) {
         <div className="infoRating">
           {
             <p>
-              <strong>Rating</strong>: ★ {`${props.rating}`}
+              <strong>Puntaje</strong>: ★ {`${props.rating}`}
             </p>
           }
         </div>
         <div className="infoContGenres">
           {
             <p className="">
-              <strong>Genres :</strong>{" "}
+              <strong>Géneros :</strong>{" "}
               {`${
                 typeof props.genres === "string"
                   ? props.genres
