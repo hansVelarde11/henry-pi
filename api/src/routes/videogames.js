@@ -50,7 +50,7 @@ router.get('/', async (req, res) => {
             let pages = 0;
             let results = [...videogamesDb]; //sumo lo que tengo en la DB
             let response = await axios.get(`https://api.rawg.io/api/games?key=${APIKEY}`);
-            while (pages < 6) {
+            while (pages < 5) {
                 pages++;
                 //filtro solo la DATA que necesito enviar al FRONT
                 const gammesREADY = response.data.results.map(game => {
