@@ -19,8 +19,7 @@ router.get('/', async (req, res) => {
         genres: el.genres.map(gen => gen.name)
     }), [])
     
-    //TODO QUERIES --------> GET /videogames?name="..." <-----------
-    // si llegan queries "name" lo agarro por aca
+    // -GET /videogames?name="NOMBRE DE JEUGO"" 
     if (req.query.name) {
         try {
             //busco si existe el juego en la API
@@ -37,7 +36,7 @@ router.get('/', async (req, res) => {
                 }
             });
 
-            //como antes me traje TODOS de la base de datos, si entro por queries, solo filtro los que coincidan con la busqueda
+            //como antes me traje TODOS de la base de datos, si entro por query, solo filtro los que coincidan con la busqueda
             const filteredGamesDb = videogamesDb.filter(g => g.name.toLowerCase().includes(req.query.name.toLowerCase()));
             //doy prioridad a la DB, y sumo todos, y corto el array en 20
             const results = [...filteredGamesDb, ...gamesREADY.splice(0, 20)];
@@ -46,12 +45,12 @@ router.get('/', async (req, res) => {
             return console.log(err)
         }
     } else {
-        // SI NO ENTRO POT QUERIES --> voy a buscar todos los juegos a la API
+        //no hay query--> voy a buscar todos los juegos a la API
         try {
             let pages = 0;
             let results = [...videogamesDb]; //sumo lo que tengo en la DB
             let response = await axios.get(`https://api.rawg.io/api/games?key=${APIKEY}`);
-            while (pages < 3) {
+            while (pages < 1) {
                 pages++;
                 //filtro solo la DATA que necesito enviar al FRONT
                 const gammesREADY = response.data.results.map(game => {
@@ -63,8 +62,7 @@ router.get('/', async (req, res) => {
                         genres: game.genres.map(g => g.name)
 					}
 				});
-                results = [...results, ...gammesREADY]
-                response = await axios.get(response.data.next) //vuelvo a llamar a la API con next
+                results = [...results, ...gammesREADY] //vuelvo a llamar a la API con next
             }
             return res.json(results)
         } catch (err) {

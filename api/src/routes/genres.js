@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
                 }
             })
         })
-        //(OPTIMIZADO) --> SOLO ENVIO AL FRONT LA INFO NECESARIA (nombre de los generos)
+        //SOLO ENVIO AL FRONT LA INFO NECESARIA (nombre de los generos)
         const genresREADY = genres.map(game => {
             return{
                 id: game.id,
